@@ -22,7 +22,7 @@ public final class ReadPropertyFile {
             prop.load(fis);
 
             for(Map.Entry<Object,Object> entry:prop.entrySet()){
-                CONFIGMAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue()));
+                CONFIGMAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue()).trim());
             }
       //     prop.entrySet().forEach(entry -> CONFIGMAP.put(entry.getKey().toString(),entry.getValue().toString()));
         } catch (FileNotFoundException e) {
