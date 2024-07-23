@@ -3,7 +3,7 @@
 <!--    <listeners>-->
 <!--        <listener class-name="listener.ListenersImplementation"></listener>-->
 <!--    </listeners>-->
-    <test name="Regression" preserve-order="true">
+    <test name="Regression" preserve-order="true" parallel="methods" thread-count="2">
         <classes>
             <class name="org.example.tests.LoginPageTest" />
             <!-- Các lớp kiểm thử khác -->
