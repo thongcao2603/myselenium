@@ -1,10 +1,8 @@
 package org.example.driver;
 
-import org.example.utils.ReadPropertyFile;
-import org.openqa.selenium.WebDriver;
+import org.example.utils.PropertyUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.IOException;
 import java.util.Objects;
 
 public class Driver {
@@ -15,7 +13,7 @@ public class Driver {
         //ngan khong cho tao them driver neu da ton tai
        if (Objects.isNull(DriverManager.getDriver())){
            DriverManager.setDriver(new ChromeDriver());
-          DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+          DriverManager.getDriver().get(PropertyUtils.get("url"));
        }
     }
 

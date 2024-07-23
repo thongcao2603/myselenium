@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import org.example.enums.WaitStrategy;
 import org.openqa.selenium.By;
 
 public class LoginPage extends BasePage {
@@ -9,17 +10,17 @@ public class LoginPage extends BasePage {
     private final By buttonLogin=By.xpath("//button[normalize-space()='Login']");
 
     public LoginPage enterUsername(String username) {
-        sendKeys(inputEmail,username,"present");
+        sendKeys(inputEmail,username, WaitStrategy.PRESENCE);
         return this;
     }
 
     public LoginPage enterPassword(String password) {
-        sendKeys(inputPassword,password,"present");
+        sendKeys(inputPassword,password,WaitStrategy.PRESENCE);
         return this;
     }
 
     public HomePage clickLogin() {
-        click(buttonLogin,"clickable");
+        click(buttonLogin,WaitStrategy.CLICKABLE);
         return new HomePage();
     }
 

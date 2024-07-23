@@ -10,8 +10,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
-public final class ReadPropertyFile {
-    private ReadPropertyFile() {}
+public final class PropertyUtils {
+    private PropertyUtils() {}
 
     private static Properties prop = new Properties();
     private static final Map<String,String> CONFIGMAP = new HashMap<>();
