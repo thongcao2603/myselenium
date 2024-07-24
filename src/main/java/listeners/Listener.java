@@ -1,19 +1,33 @@
 package listeners;
 
 import org.example.driver.Driver;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import org.example.driver.DriverManager;
+import org.testng.*;
+import reports.ExtentReport;
 
-public class Listener implements ITestListener {
+public class Listener implements ITestListener, ISuiteListener {
+    @Override
+    public void onStart(ISuite suite) {
+        ExtentReport.initReports();
+    }
+
+    @Override
+    public void onFinish(ISuite suite) {
+        ExtentReport.flushReport();
+    }
+
     @Override
     public void onTestStart(ITestResult result) {
-        ITestListener.super.onTestStart(result);
+        try {
+            Driver.initDriver();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ITestListener.super.onTestSuccess(result);
+        Driver.quitDriver();
     }
 
     @Override
