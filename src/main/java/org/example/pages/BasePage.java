@@ -7,6 +7,7 @@ import org.example.enums.WaitStrategy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import reports.ExtentLogger;
 import reports.ExtentManager;
 
 import java.time.Duration;
@@ -20,7 +21,7 @@ public class BasePage {
 
     protected void sendKeys(By by,String value, WaitStrategy waitStrategy){
        ExplicitWaitFactory.performExplicitWait(waitStrategy,by).sendKeys(value);
-        ExtentManager.getTest().pass("enter success");
+        ExtentLogger.pass("sendkeys success");
     }
 
     protected String getPageTitle(){

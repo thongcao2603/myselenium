@@ -13,7 +13,7 @@ public class LoginPageTest extends BaseTest{
 
     @Test
     public void test1() {
-        ExtentReport.createTest("test1");
+
         LoginPage loginPage = new LoginPage();
         loginPage.enterUsername("admin");
         loginPage.enterPassword("admin123");
@@ -21,7 +21,7 @@ public class LoginPageTest extends BaseTest{
 
     @Test
     public void test2() {
-        ExtentReport.createTest("test2");
+
         LoginPage loginPage = new LoginPage();
         loginPage.enterUsername("admin");
         loginPage.enterPassword("admin123");

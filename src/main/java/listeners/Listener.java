@@ -3,6 +3,7 @@ package listeners;
 import org.example.driver.Driver;
 import org.example.driver.DriverManager;
 import org.testng.*;
+import reports.ExtentLogger;
 import reports.ExtentReport;
 
 public class Listener implements ITestListener, ISuiteListener {
@@ -18,28 +19,25 @@ public class Listener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        try {
-            Driver.initDriver();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        ExtentReport.createTest(result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        Driver.quitDriver();
+        ExtentLogger.pass(result.getMethod().getMethodName()+ " is passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ITestListener.super.onTestFailure(result);
+        ExtentLogger.pass(result.getMethod().getMethodName()+ " is failed");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ITestListener.super.onTestSkipped(result);
+        ExtentLogger.pass(result.getMethod().getMethodName()+ " is skipped");
     }
 
+    //dont use
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
         ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
@@ -52,15 +50,11 @@ public class Listener implements ITestListener, ISuiteListener {
 
     @Override
     public void onStart(ITestContext context) {
-        try {
-            Driver.initDriver();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+
     }
 
     @Override
     public void onFinish(ITestContext context) {
-        Driver.quitDriver();
+
     }
 }
