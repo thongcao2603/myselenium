@@ -34,7 +34,7 @@ public final class PropertyUtils {
 
     public static String get(String key) throws Exception {
 
-        if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key))){
+        if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.toLowerCase()))){
             throw new Exception("Property name " + key +" is not found.Plz check config.properties");
         }
         return CONFIGMAP.get(key);
