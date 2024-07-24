@@ -29,12 +29,12 @@ public class Listener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ExtentLogger.pass(result.getMethod().getMethodName()+ " is failed");
+        ExtentLogger.fail(result.getMethod().getMethodName()+ " is failed");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ExtentLogger.pass(result.getMethod().getMethodName()+ " is skipped");
+        ExtentLogger.skip(result.getMethod().getMethodName()+ " is skipped");
     }
 
     //dont use

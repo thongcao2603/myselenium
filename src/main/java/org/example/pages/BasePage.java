@@ -14,14 +14,14 @@ import java.time.Duration;
 
 public class BasePage {
 
-    protected void click(By by, WaitStrategy waitStrategy){
+    protected void click(By by, WaitStrategy waitStrategy,String elementName){
         ExplicitWaitFactory.performExplicitWait(waitStrategy,by).click();
-
+        ExtentLogger.pass(elementName+" is clicked");
     }
 
-    protected void sendKeys(By by,String value, WaitStrategy waitStrategy){
+    protected void sendKeys(By by,String value, WaitStrategy waitStrategy,String elementName){
        ExplicitWaitFactory.performExplicitWait(waitStrategy,by).sendKeys(value);
-        ExtentLogger.pass("sendkeys success");
+        ExtentLogger.pass(value +" is entered successfully in " +elementName);
     }
 
     protected String getPageTitle(){
