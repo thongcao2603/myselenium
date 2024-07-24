@@ -1,5 +1,6 @@
 package org.example.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -15,7 +16,7 @@ public class LoginPageTest extends BaseTest{
 
     @Test
     public void test2() {
-        System.out.println("hihih");
+        Assert.assertTrue(false);
     }
 
 }
