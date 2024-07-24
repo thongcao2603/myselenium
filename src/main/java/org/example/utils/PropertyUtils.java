@@ -32,10 +32,14 @@ public final class PropertyUtils {
         }
     }
 
-    public static String get(String key) throws Exception {
+    public static String get(String key) {
 
         if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.toLowerCase()))){
-            throw new Exception("Property name " + key +" is not found.Plz check config.properties");
+            try {
+                throw new Exception("Property name " + key +" is not found.Plz check config.properties");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
         return CONFIGMAP.get(key);
     }

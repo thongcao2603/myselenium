@@ -12,7 +12,7 @@ public class LoginPageTest extends BaseTest{
     private LoginPageTest(){}
 
     @Test
-    public void test1() {
+    public void test1() throws Exception {
 
         LoginPage loginPage = new LoginPage();
         loginPage.enterUsername("admin");
@@ -20,8 +20,7 @@ public class LoginPageTest extends BaseTest{
     }
 
     @Test
-    public void test2() {
-
+    public void test2() throws Exception {
         LoginPage loginPage = new LoginPage();
         loginPage.enterUsername("admin");
         loginPage.enterPassword("admin123");

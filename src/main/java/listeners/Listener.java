@@ -9,7 +9,11 @@ import reports.ExtentReport;
 public class Listener implements ITestListener, ISuiteListener {
     @Override
     public void onStart(ISuite suite) {
-        ExtentReport.initReports();
+        try {
+            ExtentReport.initReports();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
