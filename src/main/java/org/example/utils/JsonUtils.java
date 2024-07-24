@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public class JsonUtils {
 
-    @DataProvider
     public Object[] getData() throws IOException {
         HashMap<String,Object> map1 = new ObjectMapper()
                 .readValue(new File(System.getProperty("user.dir") + "/src/test/resources/data/data.json"),

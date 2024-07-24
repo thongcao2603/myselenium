@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class ExcelUtils {
 
-    @DataProvider(name = "getDataLogin")
     public Object[] getData() throws IOException {
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/data/auto.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
