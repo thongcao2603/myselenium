@@ -1,13 +1,16 @@
 package org.example.tests;
 
+import org.testng.annotations.Test;
+
 import java.util.Map;
 
 public class LoginPageTest extends BaseTest{
 
     private LoginPageTest(){}
 
-    public void test1(Map<String,Object> map) {
-
+    @Test
+    public void test1() {
+        System.out.println("jejeje");
     }
 
 }
