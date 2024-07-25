@@ -48,12 +48,12 @@ public class Listener implements ITestListener, ISuiteListener {
     //dont use
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+
     }
 
     @Override
     public void onTestFailedWithTimeout(ITestResult result) {
-        ITestListener.super.onTestFailedWithTimeout(result);
+
     }
 
     @Override

@@ -1,6 +1,7 @@
 package org.example.tests;
 
 import org.example.pages.LoginPage;
+import org.example.utils.DataProviderUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import reports.ExtentReport;
@@ -11,15 +12,15 @@ public class LoginPageTest extends BaseTest{
 
     private LoginPageTest(){}
 
-    @Test
-    public void test1() throws Exception {
+    @Test(dataProvider = "getData",dataProviderClass = DataProviderUtils.class)
+    public void test1(Map<String,String> data) throws Exception {
 
         LoginPage loginPage = new LoginPage();
-        loginPage.enterUsername("admin");
-        loginPage.enterPassword("admin123");
+        loginPage.enterUsername(data.get("username"));
+        loginPage.enterPassword(data.get("password"));
     }
 
-    @Test
+    @Test()
     public void test2() throws Exception {
         LoginPage loginPage = new LoginPage();
         loginPage.enterUsername("admin");
