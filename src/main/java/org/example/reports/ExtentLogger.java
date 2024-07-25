@@ -1,7 +1,6 @@
-package reports;
+package org.example.reports;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.observer.entity.MediaEntity;
 import org.example.utils.MyUtils;
 import org.example.utils.PropertyUtils;
 

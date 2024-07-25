@@ -9,7 +9,7 @@ public class Driver {
     private Driver(){}
 
 
-    public static void initDriver() throws Exception {
+    public static void initDriver(){
         //ngan khong cho tao them driver neu da ton tai
        if (Objects.isNull(DriverManager.getDriver())){
            DriverManager.setDriver(new ChromeDriver());

@@ -1,11 +1,11 @@
 package org.example.pages;
 
-import factories.ExplicitWaitFactory;
+import org.example.factories.ExplicitWaitFactory;
 import org.example.driver.DriverManager;
 import org.example.enums.WaitStrategy;
 import org.openqa.selenium.By;
 
-import reports.ExtentLogger;
+import org.example.reports.ExtentLogger;
 
 
 public class BasePage {

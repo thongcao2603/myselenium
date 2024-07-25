@@ -1,4 +1,4 @@
-package factories;
+package org.example.factories;
 
 import org.example.constants.FrameworkConstants;
 import org.example.driver.DriverManager;

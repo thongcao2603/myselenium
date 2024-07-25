@@ -1,10 +1,8 @@
-package listeners;
+package org.example.listeners;
 
-import org.example.driver.Driver;
-import org.example.driver.DriverManager;
 import org.testng.*;
-import reports.ExtentLogger;
-import reports.ExtentReport;
+import org.example.reports.ExtentLogger;
+import org.example.reports.ExtentReport;
 
 import java.util.Arrays;
 

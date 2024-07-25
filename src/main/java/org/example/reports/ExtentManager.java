@@ -1,4 +1,4 @@
-package reports;
+package org.example.reports;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -9,7 +9,7 @@ public class ExtentManager  {
 
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-    static ExtentTest getTest() {
+    public static ExtentTest getTest() {
         return test.get();
     }
     static void setTest(ExtentTest extentTest) {
