@@ -6,6 +6,8 @@ import org.testng.*;
 import reports.ExtentLogger;
 import reports.ExtentReport;
 
+import java.util.Arrays;
+
 public class Listener implements ITestListener, ISuiteListener {
     @Override
     public void onStart(ISuite suite) {
@@ -34,6 +36,8 @@ public class Listener implements ITestListener, ISuiteListener {
     @Override
     public void onTestFailure(ITestResult result) {
         ExtentLogger.fail(result.getMethod().getMethodName()+ " is failed",true);
+        ExtentLogger.fail(result.getThrowable().toString());
+        ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
     }
 
     @Override
