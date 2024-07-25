@@ -15,7 +15,7 @@ public class FrameworkConstants {
         return EXCELPATH;
     }
 
-    public static String getExtentReportPath() throws Exception {
+    public static String getExtentReportPath() {
         if (PropertyUtils.get("overridereports").equalsIgnoreCase("no")){
             return EXTENTREPORTPATH+"/" +System.currentTimeMillis()+"/index.html";
         }

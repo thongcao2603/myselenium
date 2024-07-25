@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ExplicitWaitFactory {
+    private ExplicitWaitFactory() {}
 
     public static WebElement performExplicitWait(WaitStrategy waitStrategy, By by) {
         WebElement element = null;

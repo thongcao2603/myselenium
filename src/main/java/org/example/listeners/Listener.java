@@ -9,11 +9,7 @@ import java.util.Arrays;
 public class Listener implements ITestListener, ISuiteListener {
     @Override
     public void onStart(ISuite suite) {
-        try {
-            ExtentReport.initReports();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        ExtentReport.initReports();
     }
 
     @Override

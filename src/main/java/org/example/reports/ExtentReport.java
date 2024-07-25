@@ -16,7 +16,7 @@ public final class ExtentReport {
     private static ExtentReports extent;
     public static ExtentTest test;
 
-    public static void initReports() throws Exception {
+    public static void initReports(){
         if (Objects.isNull(extent)) {
             extent = new ExtentReports();
             ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentReportPath());
