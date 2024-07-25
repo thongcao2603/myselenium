@@ -6,7 +6,7 @@ import org.example.utils.PropertyUtils;
 
 public final class ExtentLogger {
     private ExtentLogger() {}
-    private static ExtentLogger extenLogger;
+
 
     public static void pass(String message){
         ExtentManager.getTest().pass(message);

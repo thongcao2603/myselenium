@@ -1,6 +1,7 @@
 package org.example.tests;
 
 import org.example.driver.Driver;
+import org.example.utils.PropertyUtils;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -11,7 +12,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        Driver.initDriver();
+        Driver.initDriver(PropertyUtils.get("browser"));
     }
 
     @AfterMethod
