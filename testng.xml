@@ -2,7 +2,7 @@
 <suite name="Suite" data-provider-thread-count="3" >
     <listeners>
         <listener class-name="listeners.Listener"/>
-        <listener class-name="listeners.MethodInterceptor" />
+<!--        <listener class-name="listeners.MethodInterceptor" />-->
     </listeners>
     <test name="Regression" parallel="methods" thread-count="2">
         <classes>
